@@ -4,7 +4,7 @@ date: 2020-07-27 15:59:00 -0400
 categories: linux
 ---
 
-####  Linux Mint 한글 설정
+#### Linux Mint 한글 설정
 ```
 $ sudo apt-get install nabi
 $ im-config
@@ -12,7 +12,7 @@ hangul 선택
 ```
 
 #### zsh 적용
-````
+```
 $ sudo apt-get install zsh
 $ chsh -s /usr/bin/zsh
 $ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
