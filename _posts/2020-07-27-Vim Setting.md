@@ -4,7 +4,7 @@ date: 2020-07-27 16:01:00 -0400
 categories: linux
 ---
 
-####Vim Plugin 설치
+#### Vim Plugin 설치
 ```
 sudo apt install vim-gui-common vim-runtime
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
