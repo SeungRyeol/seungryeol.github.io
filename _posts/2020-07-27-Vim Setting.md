@@ -6,7 +6,8 @@ categories: linux
 
 #### Vim Plugin 설치
 ```
-sudo apt install vim-gui-common vim-runtime
+sudo apt update && install vim-gui-common vim-runtime
+sudo apt install vim-gtk -y
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
