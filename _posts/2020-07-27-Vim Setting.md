@@ -78,6 +78,8 @@ set laststatus=2
 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
 " 검색 설정
 set ignorecase
+" 시스템 클립보드를 기본 값으로
+set clipboard=unnamedplus
 " 마지막으로 수정된 곳에 커서를 위치함
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
