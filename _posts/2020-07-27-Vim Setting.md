@@ -95,6 +95,12 @@ augroup markdown
 augroup END
 ```
 
+#### 플러그인 설치
+```
+:PluginInstall
+```
+
+
 #### 기타
 - \nt 를 입력하면 왼쪽에 파일 트리가 나타난다.
 - ctrl + w, w 를 누르면 파일트리 <--> 에디터 창으로 포커스가 이동된다.
