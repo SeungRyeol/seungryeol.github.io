@@ -17,10 +17,8 @@ $ sudo apt-get install zsh
 $ chsh -s /usr/bin/zsh
 $ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# ~/.zshrc를 열어서 theme를 agnoster로 변경
-
 # 폰트 다운
-$ sudo apt intsll fonts-powerline
+$ sudo apt install fonts-powerline
 
 # ~/.zshrc를 열어서 DEFAULT_USER추가
 # DEFAULT_USER
@@ -28,4 +26,9 @@ DEFAULT_USER="cwsfa"
 
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 $ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+
+# 테마
+https://velog.io/@yujo/Ubuntu-20.04%EC%9A%B0%EB%B6%84%ED%88%AC-Terminal-%EC%84%B8%ED%8C%85
+
 ```
+
