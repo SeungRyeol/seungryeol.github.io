@@ -13,6 +13,7 @@ categories: development
 - indent-rainbow
 - Korean Language Pack for Visual Studio Code
 - vscode-icons
+- Remoote - SSH
 
 #### 프로그래밍 언어 관련 Extension
 
