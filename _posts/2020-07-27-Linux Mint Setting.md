@@ -60,9 +60,9 @@ swipe:
     down:
       command: 'xdotool key ctrl+alt+Down'  # Show all windows
     right:
-      command: 'xdotool key ctrl+alt+Right'  # Workspace right
-    left:
       command: 'xdotool key ctrl+alt+Left'  # Workspace left
+    left:
+      command: 'xdotool key ctrl+alt+Right'  # Workspace right
   3:
     up:
       command: 'xdotool key alt+space'  # Albert
