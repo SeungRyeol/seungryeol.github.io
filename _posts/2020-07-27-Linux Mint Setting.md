@@ -12,6 +12,12 @@ im-config
 # hangul 선택 진행
 ```
 
+#### Terminator 셋팅 ([테마설정](https://github.com/EliverLara/terminator-themes))
+
+```bash
+sudo apt install terminator
+```
+
 #### zsh 적용
 
 ```bash
