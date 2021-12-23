@@ -1,10 +1,10 @@
 ---
 title: "ROS1 Noetic & ROS2 Foxy Installation"
-date: 2021-05-17 16:45:00 -0400
+date: 2021-12-23 14:13:00 -0400
 categories: ros2
 ---
 
-Linux Mint 20.1 Ulyssa 기준 설치 방법 입니다.
+Linux Mint 20.2 Uma 기준 설치 방법 입니다.
 
 ## ROS1 Noetic
 
@@ -59,7 +59,7 @@ Linux Mint 20.1 Ulyssa 기준 설치 방법 입니다.
 - 필수 패키지 설치
 
     ```bash
-    sudo apt install ^ros-foxy-rmw-fastrtps-cpp
+    sudo apt install ros-foxy-rmw-fastrtps-cpp
     sudo apt install ros-foxy-rmw-cyclonedds-cpp
 
     sudo apt update && sudo apt install -y build-essential cmake git libbullet-dev python3-colcon-common-extensions python3-flake8 python3-pip python3-pytest-cov python3-rosdep python3-setuptools python3-vcstool wget
