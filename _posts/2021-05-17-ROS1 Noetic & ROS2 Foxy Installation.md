@@ -100,6 +100,7 @@ noetic(){
 foxy(){
     source /opt/ros/foxy/setup.zsh
     source ~/robot_ws/install/local_setup.zsh
+    source ~/uros_ws/install/local_setup.zsh
 
     source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
     source /usr/share/vcstool-completion/vcs.bash
@@ -132,9 +133,9 @@ foxy(){
     alias ctp='colcon test --packages-select'
     alias ctr='colcon test-result'
 
-    alias rt='ros2 topic list'
-    alias re='ros2 topic echo'
-    alias rn='ros2 node list'
+    alias tl='ros2 topic list'
+    alias te='ros2 topic echo'
+    alias nl='ros2 node list'
 
     alias killgazebo='killall -9 gazebo & killall -9 gzserver  & killall -9 gzclient'
 
@@ -149,4 +150,20 @@ foxy(){
     echo "ROS2 Foxy is Activated!"
 }
 
+```
+
+## Micro ROS agent
+
+```bash
+# Download & Install
+foxy
+mkdir uros_ws && cd uros_ws
+git clone -b $ROS_DISTRO https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup
+rosdep update && rosdep install --from-path src --ignore-src -y
+colcon build
+
+# Setup micro-ROS agent
+source install/local_setup.zsh
+ros2 run micro_ros_setup create_agent_ws.sh
+ros2 run micro_ros_setup build_agent.sh
 ```
