@@ -107,7 +107,6 @@ foxy(){
     source /usr/share/colcon_cd/function/colcon_cd.sh
     export _colcon_cd_root=~/robot_ws
 
-    export ROS_DOMAIN_ID=7
     # export ROS_NAMESPACE=robot1
 
     export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
@@ -148,6 +147,16 @@ foxy(){
     alias testsubimg='ros2 run image_tools showimage'
 
     echo "ROS2 Foxy is Activated!"
+
+    if [ $# -eq 1 ]
+    then
+        if [ $1 = "-n" ]
+        then
+            export ROS_DOMAIN_ID=7
+        else
+            echo "Invalid option."
+        fi
+    fi
 }
 
 ```
