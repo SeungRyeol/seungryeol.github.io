@@ -1,6 +1,6 @@
 ---
 title: "Nonlinear Optimization"
-date: 2022-02-12 22:58:00 -0400
+date: 2022-02-11 22:58:00 -0400
 categories: math
 ---
 
