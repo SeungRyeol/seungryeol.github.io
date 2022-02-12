@@ -6,8 +6,6 @@ categories: math
 
 ## Nonlinear Optimization
 
----
-
 비선형 최적화에 대해 이해하고, 다양한 최적화 방법들을 알아봅니다.
 그리고 ceres, g2o 같은 최적화 툴을 통해 문제를 해결하는 법을 알아봅시다.
 
@@ -38,8 +36,6 @@ categories: math
 - Curve Fitting with g2o
 
 ## 참고자료
-
----
 
 [최적화 기법의 직관적 이해](https://darkpgmr.tistory.com/149)
 
