@@ -1,6 +1,6 @@
 ---
 title: "Visual Odometry"
-date: 2022-02-17 23:31:00 -0400
+date: 2022-02-16 22:58:00 -0400
 categories: slam
 ---
 
