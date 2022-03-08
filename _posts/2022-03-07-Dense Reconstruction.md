@@ -6,7 +6,7 @@ categories: slam
 
 # Dense Reconstruction
 
-![Different type of maps](./img/Untitled.png)
+![Different type of maps](Dense%20Reco%20a20d6/Untitled.png)
 
 Different type of maps
 
@@ -21,7 +21,7 @@ Different type of maps
 
 ---
 
-![Untitled](./img/Untitled%201.png)
+![Untitled](Dense%20Reco%20a20d6/Untitled%201.png)
 
 - monocular camera에서 depth 추정 방법
     1. feature 추출
@@ -36,9 +36,9 @@ Different type of maps
         - 한 픽셀의 grayscale invariance에 강해짐
     - 블록과 블록의 차이 계산 방법들 (블럭 유사도 측정)
         
-        ![Untitled](./img/Untitled%202.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%202.png)
         
-        ![Untitled](./img/Untitled%203.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%203.png)
         
         → $\bold{A}$: $p_1$ 주변의 블록 / $\bold{B}$: epipolar line상의 $n$개의 작은 블록
         
@@ -46,15 +46,15 @@ Different type of maps
         
         1. SAD (Sum of Absolute Difference)
             
-            ![Untitled](./img/Untitled%204.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%204.png)
             
         2. SSD (Sum of Squared Distance), not solid state drive
             
-            ![Untitled](./img/Untitled%205.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%205.png)
             
         3. NCC (Normalized Cross Correlation)
             
-            ![Untitled](./img/Untitled%206.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%206.png)
             
     
     - epipolar line에서 $\bold{A}$와 $\bold{B}_i$ 사이의 유사성 척도 계산 (NCC를 사용한다고 가정)
@@ -63,7 +63,7 @@ Different type of maps
         - **이와 같은 이유로 `depth`는 단일 값이 아니라 확률분포를 따라야하며, 다른 이미지의 epipolar line들을 찾으면서 depth distribution을 업데이트해야 함
         (⇒ *depth filter*)**
         
-        ![Matching score along with the epipolar line](./img/Untitled%207.png)
+        ![Matching score along with the epipolar line](Dense%20Reco%20a20d6/Untitled%207.png)
         
         Matching score along with the epipolar line
         
@@ -84,11 +84,11 @@ Different type of maps
 - **유도 과정**
     1. 픽셀의 깊이 $d$를 아래와 같이 가우시안 분포를 따른다고 가정
         
-        ![Untitled](./img/Untitled%208.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%208.png)
         
     2. 새로운 데이터를 관측(obs)하였을 때의 깊이 $d_{\mathrm{obs}}$도 마찬가지로 정의하면,
         
-        ![Untitled](./img/Untitled%209.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%209.png)
         
     3. 두 분포에 대한 결합을 정의하면
         
@@ -96,7 +96,7 @@ Different type of maps
         
         → 새로운 관측을 바탕으로 기존 $d$의 분포를 갱신
         
-        ![Untitled](./img/Untitled%2010.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%2010.png)
         
         ⇒ 그렇다면 $\sigma_\mathrm{obs}$는 어떻게 구할 것인가?
         
@@ -104,24 +104,24 @@ Different type of maps
             
             → 기하학적 관계로 인한 불확실성만 고려
             
-            ![Untitled](./img/Untitled%2011.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2011.png)
             
         2. 위 그림에 대한 기하학적 관계를 수식으로 표현하면,
             
-            ![Untitled](./img/Untitled%2012.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2012.png)
             
         3. block matching을 수행하기 위해, $p_2$를 이동시키는 것은 $\beta$의 변화를 유발하게 되고,
         그에 따라 $\beta'$는
             
-            ![Untitled](./img/Untitled%2013.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2013.png)
             
         4. sin 법칙을 통해 단일 픽셀로부터 오는 불확실성 depth $\bold{p'}$를 구하면, 
             
-            ![Untitled](./img/Untitled%2014.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2014.png)
             
         5. epipolar line상의 block matching에 픽셀 오류가 하나만 있다고 가정하면, 
             
-            ![Untitled](./img/Untitled%2015.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2015.png)
             
 
 - **픽셀의 depth 추정과정 정리**
@@ -141,13 +141,13 @@ Different type of maps
         - 이 문제는 단안뿐만 아니라 양안 카메라에서도 나타남
         - 아래 오른쪽 그림의 프린터처럼 균일한 흰색의 경우, 왼쪽 결과처럼 부정확한 depth 추정
             
-            ![Untitled](./img/Untitled%2016.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2016.png)
             
     - **pixel gradients**와 **epipolar line** 사이의 각도가 클 때, epipolar line 일치의 불확실성이 큼
         - 각도가 작으면 일치의 불확실성이 작음
         - 극단적인 예 2가지
             
-            ![Untitled](./img/Untitled%2017.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2017.png)
             
             1. pixel gradients가 epipolar line과 **평행**한 경우
                 
@@ -177,21 +177,21 @@ Different type of maps
     - 참조 frame과 현재 frame의 모션을 고려해야 함
         1. 참조 frame의 한 점 $\bold{P}_R$은 실제 3차원 world 포인트 좌표 $\bold{P}_W$와 아래와 같은 관계를 갖음
             
-            ![Untitled](./img/Untitled%2018.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2018.png)
             
         2. 현재 frame의 한 점 $\bold{P}_C$도 $\bold{P}_W$와 아래와 같은 관계를 갖음
             
-            ![Untitled](./img/Untitled%2019.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2019.png)
             
         3. $\bold{P}_W$를 제거하기 위해 대입하면 아래와 같은 관계식이 나옴
             
             → $d_{R},\bold{P}_R$을 알고 있으면, $\bold{P}_C$를 계산 할 수 있음
             
-            ![Untitled](./img/Untitled%2020.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2020.png)
             
         4. $\bold{P}_R$의 증분 $\mathrm{d}u,\mathrm{d}v$이 주어졌을 때, 그에 따른 $\bold{P}_C$의 $\mathrm{d}u_C,\mathrm{d}v_C$를 구할 수 있고, 선형 관계를 affine 변환 꼴로 표현하면,
             
-            ![Untitled](./img/Untitled%2021.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2021.png)
             
     - 위 affine 변환 수행 후, block matching을 수행할 경우 더욱 좋은 결과를 얻을 수 있음
 
@@ -220,7 +220,7 @@ Different type of maps
     2. statistical filter: 가장 가까운 N 점에서 각 점의 거리 값 분포를 계산하여, 평균 거리가 너무 큰 점을 제거하는 방식으로 outlier 제거
     3. voxel filter: 중첩 영역에는 많은 수의 밀집된 점을 다운샘플링
         
-        ![Untitled](./img/Untitled%2022.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%2022.png)
         
     
 
@@ -230,27 +230,27 @@ Different type of maps
 
 - **3차원 공간의 데이터 표현 방식**
     
-    ![Untitled](./img/Untitled%2023.png)
+    ![Untitled](Dense%20Reco%20a20d6/Untitled%2023.png)
     
     - 어떤 객체의 정보를 나타내기 위해서는 객체의 존재 여부와 객체가 어디에 존재하는지를 알아야 함
         
         → 기준 좌표계(or 공간)에 대한 정의가 필요한 이유
         
-        ![Untitled](./img/Untitled%2024.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%2024.png)
         
     - 그렇다면 3차원 박스에는 몇 개의 Point가 존재할 수 있을까?
         
-        ![Untitled](./img/Untitled%2025.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%2025.png)
         
     - 정답은 `무수히 많다`
         - 따라서 일정한 부피를 갖는 기준공간이 필요 ⇒ 복셀(Voxel)
         - 어떤 3차원 공간을 Voxel 기준으로 표현할 수 있음
             
-            ![Untitled](./img/Untitled%2026.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2026.png)
             
     - Voxel을 활용하면 데이터의 공간을 절약할 수 있음
         
-        ![Untitled](./img/Untitled%2027.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%2027.png)
         
     - `정리`
         - **픽셀(Pixel)**: 2D 공간의 한 점을 정의한 그래픽 정보
@@ -263,23 +263,23 @@ Different type of maps
             2. 생성한 자식 노드 중, 객체를 포함하는 노드가 또 다른 자식노드를 만듦
             3. 더 이상 자식 노드를 생성할 필요가 없을 때까지 이를 반복
             
-            ![Untitled](./img/Untitled%2028.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2028.png)
             
     
 - **Octree의 확률적 데이터 표현 방식**
     - 사람의 눈(센서)는 100% 정확하지 않음
         
-        ![Untitled](./img/Untitled%2029.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%2029.png)
         
     - 또한, 사람마다 객체(데이터)를 판단하는 기준이 다름
         
         → 객체의 정보를 취득하는 센서는, 불확실한 데이터를 취득할 가능성이 있음
         
-        ![Untitled](./img/Untitled%2030.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%2030.png)
         
     - 이러한 센서의 불확실성을 확률적 모델링하여 객체의 존재 여부를 표현하면
         
-        ![Untitled](./img/Untitled%2031.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%2031.png)
         
     - 데이터표현 방식
         - 가정
@@ -305,11 +305,11 @@ Different type of maps
             
             → logit transform 사용
             
-            ![Untitled](./img/Untitled%2032.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2032.png)
             
             → 역함수의 경우
             
-            ![Untitled](./img/Untitled%2033.png)
+            ![Untitled](Dense%20Reco%20a20d6/Untitled%2033.png)
             
             → $y$가 $-\infty$에서 $+\infty$로 변하면, $x$는 0에서 1로 변함 ($y$가 0이면, $x$는 0.5)
             
@@ -327,7 +327,7 @@ Different type of maps
         - 표면 앞 →양수 / 표면 뒤 → 음수
         - zero-crossing point는 물체의 표면
         
-        ![Untitled](./img/Untitled%2034.png)
+        ![Untitled](Dense%20Reco%20a20d6/Untitled%2034.png)
         
 
 # Stereo Dense Reconstruction
@@ -340,7 +340,7 @@ Different type of maps
 - `feature`: 2D pixel 상의 특징
 - `landmark`: 삼각측량 법으로 얻어진 3D position
 
-![Untitled](./img/Untitled%2035.png)
+![Untitled](Dense%20Reco%20a20d6/Untitled%2035.png)
 
 ### **Pipeline**
 
@@ -377,7 +377,7 @@ Different type of maps
     - 키 프레임과 랜드마크 포인트를 통해 pose 최적화 수행 후, 결과를 반환
     - 새로운 데이터에 대해, 최적화 후 map scale 조절 등을 수행
 
-![Untitled](./img/Untitled%2036.png)
+![Untitled](Dense%20Reco%20a20d6/Untitled%2036.png)
 
 ### **Etc.**
 
