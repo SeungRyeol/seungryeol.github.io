@@ -7,6 +7,8 @@ categories: slam
 # Dense Reconstruction
 
 ![Different type of maps](/_imgs/Dense%20Reco%20a20d6/Untitled.png)
+![Different type of maps](/_imgs/test.png)
+![Different type of maps](../../_imgs/test.png)
 
 Different type of maps
 
