@@ -2,6 +2,7 @@
 title: "Dense Reconstruction"
 date: 2022-03-07 09:07:00 -0400
 categories: slam
+use_math: true
 ---
 
 # Dense Reconstruction
