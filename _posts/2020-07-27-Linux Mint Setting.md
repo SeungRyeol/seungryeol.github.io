@@ -87,3 +87,10 @@ interval:
   swipe: 1
   pinch: 1
 ```
+
+#### 기타 설치
+
+```bash
+sudo apt install terminator
+sudo apt install peek # gif capture
+```
