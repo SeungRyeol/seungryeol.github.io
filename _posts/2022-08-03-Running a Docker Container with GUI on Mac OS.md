@@ -46,8 +46,9 @@ use_math: true
     xhost + $IP
     ```
 
-8. Run Firefox from Docker Container (test)
+8. Run ROS Noetic from Docker Container (test)
 
     ```bash
-    docker run -d --name firefox -e DISPLAY=$IP:0 -v /tmp/.X11-unix:/tmp
+    docker pull osrf/ros:noetic-desktop-full
+    docker run -dit -e DISPLAY=$IP:0 -v /tmp/.X11-unix:/tmp --name ros osrf/ros:noetic-desktop-full
     ```
