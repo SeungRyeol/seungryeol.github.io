@@ -50,5 +50,5 @@ use_math: true
 
     ```bash
     docker pull osrf/ros:noetic-desktop-full
-    docker run -dit -e DISPLAY=$IP:0 -v /tmp/.X11-unix:/tmp --name ros osrf/ros:noetic-desktop-full
+    docker run -dit --platform linux/amd64 -e DISPLAY=$IP:0 -v /tmp/.X11-unix:/tmp --name ros osrf/ros:noetic-desktop-full
     ```
