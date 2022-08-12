@@ -53,7 +53,7 @@ use_math: true
     docker run -dit --platform linux/amd64 -e DISPLAY=$IP:0 -v /tmp/.X11-unix:/tmp --name ros osrf/ros:noetic-desktop-full
     ```
 
-9. Open .bashrc and add the following lines
+9. Open ~/.bashrc and add the following lines
 
     ```bash
     source /opt/ros/noetic/setup.bash
