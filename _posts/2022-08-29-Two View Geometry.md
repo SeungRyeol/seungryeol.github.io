@@ -24,13 +24,13 @@ use_math: true
     - Constraints
         - $n \times \text { projective transformation } \mathbf{x}_{i}^{\prime}=\mathrm{H} \mathbf{x}_{i}$
     - Solutions ($n \geq 4$) ⇒ `4-point algorithm`
-        - OpenCV `[cv::getPerspectiveTransform()](https://docs.opencv.org/4.x/da/d54/group__imgproc__transform.html#ga20f62aa3235d869c9956436c870893ae)` and `[cv::findHomography()](apple.com/kr-edu/store)`
+        - OpenCV [cv::getPerspectiveTransform()](https://docs.opencv.org/4.x/da/d54/group__imgproc__transform.html#ga20f62aa3235d869c9956436c870893ae) and [cv::findHomography()](apple.com/kr-edu/store)
         - cf. More simplified transformations need less number of minimal correspondence.
 
             → Affine ($n \geq 3$), similarity ($n \geq 2$), Euclidean ($n \geq 2$)
 
     - [Note] Planar homography can be decomposed as relative camera pose.
-        - OpenCV `[cv::decomposeHomographyMat()](https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html#ga7f60bdff78833d1e3fd6d9d0fd538d92)`
+        - OpenCV [cv::decomposeHomographyMat()](https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html#ga7f60bdff78833d1e3fd6d9d0fd538d92)
         - cf. However, the decomposition needs to know camera matrices.
 
 ## General 2D-2D Geometry (Epiploar Geometry)
@@ -69,7 +69,7 @@ use_math: true
     - Solutions (OpenCV)
         - **Fundamental matrix**: 7/8-point algorithm (7 DoF)
 
-            → **Estimation**: `[cv::findFundamentalMat()](https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga59b0d57f46f8677fb5904294a23d404a)` ⇒ 1 solution
+            → **Estimation**: [cv::findFundamentalMat()](https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga59b0d57f46f8677fb5904294a23d404a) ⇒ 1 solution
 
             → **Conversion to $\mathrm{E}$**: $\mathrm{E}=\mathrm{K}^{\prime \top} \mathrm{FK}$
 
@@ -79,11 +79,11 @@ use_math: true
 
         - **Essential matrix**: 5-point algorithm (5 DoF)
 
-            → **Estimation**: `[cv::findEssentialMat()](https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga0b166d41926a7793ab1c351dbaa9ffd4)` ⇒ $k$ solutions
+            → **Estimation**: [cv::findEssentialMat()](https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga0b166d41926a7793ab1c351dbaa9ffd4) ⇒ $k$ solutions
 
-            → **Decomposition**: `[cv::decomposeEssentialMat()](https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga54a2f5b3f8aeaf6c76d4a31dece85d5d)` ⇒ 4 solutions “relative pose ambiguity”
+            → **Decomposition**: [cv::decomposeEssentialMat()](https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga54a2f5b3f8aeaf6c76d4a31dece85d5d) ⇒ 4 solutions “relative pose ambiguity”
 
-            → **Decomposition with positive-depth check**: `[cv::recoverPose()](https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html#ga1b2f149ee4b033c4dfe539f87338e243)` ⇒ 1 solution
+            → **Decomposition with positive-depth check**: [cv::recoverPose()](https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html#ga1b2f149ee4b033c4dfe539f87338e243) ⇒ 1 solution
 
             → **Degenerate case**: No translation ($\because \mathrm{E}=[\mathrm{t}]_{\times} \mathrm{R}$)
 
@@ -91,10 +91,10 @@ use_math: true
 
         - **Planar homography**: 4-point algorithm (8 DoF)
 
-            → **Estimation**: `[cv::findHomography()](https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga4abc2ece9fab9398f2e560d53c8c9780)` ⇒ 1 solution
+            → **Estimation**: [cv::findHomography()](https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga4abc2ece9fab9398f2e560d53c8c9780) ⇒ 1 solution
 
             → **Conversion to calibrated $\mathrm{H}$**: $\widehat{\mathrm{H}}=\mathrm{K}^{\prime-1} \mathrm{HK}$
-            → **Decomposition**: `[cv::decomposeHomographyMat()](https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga7f60bdff78833d1e3fd6d9d0fd538d92)` ⇒ 4 solutions
+            → **Decomposition**: [cv::decomposeHomographyMat()](https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga7f60bdff78833d1e3fd6d9d0fd538d92) ⇒ 4 solutions
             → **Degenerate case**: Correspondence not from a single plane
 
             → intrinsic & extrinsic camera parameters + plane normal
