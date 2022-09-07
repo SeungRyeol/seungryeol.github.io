@@ -98,3 +98,5 @@ use_math: true
             → **Degenerate case**: Correspondence not from a single plane
 
             → intrinsic & extrinsic camera parameters + plane normal
+
+#### 본 포스트는 최성록 교수님의 [An Inviation to 3D Vision](http://github.com/sunglok/3dv_tutorial) 자료를 정리한 것입니다.

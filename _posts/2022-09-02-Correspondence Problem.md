@@ -246,3 +246,5 @@ use_math: true
         - **Selection**: gradient에 따른 cost function이 최소가 될 때
             
             → cf. Nonlinear optimization는 계산량이 많으며, local minima가 발생할 수 있음
+
+#### 본 포스트는 최성록 교수님의 [An Inviation to 3D Vision](http://github.com/sunglok/3dv_tutorial) 자료를 정리한 것입니다.
